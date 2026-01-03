@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django
+.env
+.env.*
+*.sqlite3
+media/
+staticfiles/
+logs/
+
+# Node / React Native
+node_modules/
+
+# OS
+.DS_Store

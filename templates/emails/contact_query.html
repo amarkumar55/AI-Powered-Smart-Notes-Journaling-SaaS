@@ -1,0 +1,52 @@
+{% extends "emails/base.html" %} {% block content %}
+<h2
+  style="margin: 0 0 16px 0; font-size: 20px; line-height: 28px; color: #111827"
+>
+  📩 New Contact Query
+</h2>
+
+<p
+  style="margin: 0 0 12px 0; font-size: 14px; line-height: 22px; color: #374151"
+>
+  You have received a new message from your website contact form:
+</p>
+
+<table
+  role="presentation"
+  width="100%"
+  cellpadding="0"
+  cellspacing="0"
+  border="0"
+  style="margin: 0 0 16px 0; font-size: 14px; line-height: 22px; color: #374151"
+>
+  <tr>
+    <td style="padding: 4px 0"><strong>Name:</strong> {{ full_name }}</td>
+  </tr>
+  <tr>
+    <td style="padding: 4px 0"><strong>Email:</strong> {{ email }}</td>
+  </tr>
+  <tr>
+    <td style="padding: 4px 0"><strong>Message:</strong></td>
+  </tr>
+  <tr>
+    <td style="padding: 4px 0">{{ message|linebreaksbr }}</td>
+  </tr>
+  <tr>
+    <td style="padding: 4px 0">
+      <strong>Submitted at:</strong> {{ created_at }}
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 4px 0">
+      <strong>IP Address:</strong> {{ ip_address }}
+    </td>
+  </tr>
+</table>
+
+<p
+  style="margin: 16px 0 0 0; font-size: 12px; line-height: 18px; color: #6b7280"
+>
+  This is an automated notification from your website contact form. Please do
+  not reply directly to this email.
+</p>
+{% endblock %}

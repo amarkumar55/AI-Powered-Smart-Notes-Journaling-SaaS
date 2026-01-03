@@ -1,0 +1,43 @@
+{% extends "emails/base.html" %} {% block content %}
+<h2
+  style="margin: 0 0 16px 0; font-size: 20px; line-height: 28px; color: #b91c1c"
+>
+  🚨 Error Report – {{ app_name }}
+</h2>
+
+<p
+  style="
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    color: #dc2626;
+  "
+>
+  {{ error_message }}
+</p>
+
+<pre
+  style="
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 20px;
+    color: #111827;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  "
+>
+{{ stack_trace }}
+</pre>
+
+<p
+  style="margin: 12px 0 0 0; font-size: 13px; line-height: 20px; color: #374151"
+>
+  <strong>Time:</strong> {{ timestamp }}<br />
+  <strong>Server:</strong> {{ server_name }}
+</p>
+{% endblock %}

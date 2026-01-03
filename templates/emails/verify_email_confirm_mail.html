@@ -1,0 +1,77 @@
+{% extends "emails/base.html" %} {% block content %}
+<h2
+  style="
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    line-height: 28px;
+    color: #111827;
+    text-align: center;
+  "
+>
+  👋 Welcome to {{ app_name }}, {{ first_name }}
+</h2>
+
+<p
+  style="
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #374151;
+    text-align: center;
+  "
+>
+  We’re excited to have you on board! Please verify your email address to
+  activate your account.
+</p>
+
+<!-- Button -->
+<p style="text-align: center; margin: 24px 0">
+  <a
+    href="{{ account_verification }}"
+    style="
+      display: inline-block;
+      padding: 12px 20px;
+      background: #4a90e2;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    "
+  >
+    Verify My Email
+  </a>
+</p>
+
+<!-- Fallback link -->
+<p
+  style="
+    margin: 0 0 12px 0;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+  "
+>
+  If the button doesn’t work, copy and paste this link into your browser:
+</p>
+<p
+  style="
+    margin: 0 0 16px 0;
+    font-size: 12px;
+    word-break: break-all;
+    text-align: center;
+  "
+>
+  <a
+    href="{{ account_verification }}"
+    style="color: #4a90e2; text-decoration: underline"
+  >
+    {{ account_verification }}
+  </a>
+</p>
+
+<p
+  style="margin-top: 30px; font-size: 12px; color: #6b7280; text-align: center"
+>
+  © {{ app_name }} – Secure & Trusted
+</p>
+{% endblock %}
